@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Informasi Pendaftar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header">
+    <h1>Detail Informasi Pendaftar</h1>
+    <p>Tugas Individu 3 - Pengembangan Aplikasi Web</p>
+  </div>
+
+  <div class="nav">
+    <a href="pendaftaran.html">Pendaftaran</a>
+    <a href="detail.html" class="active">Detail Pendaftar</a>
+  </div>
+
+  <div class="container">
+
+    <!-- Data di bawah ini DUMMY (statis). Halaman ini tidak menangkap query string. -->
+    <div class="box">
+      <h2>Data Pendaftar (Dummy)</h2>
+      <table>
+        <tr><th>Nama Lengkap</th><td>Settiani Simanjuntak</td></tr>
+        <tr><th>NIM</th><td>124140055</td></tr>
+        <tr><th>Kelas</th><td>RA</td></tr>
+        <tr><th>Email</th><td>settiani.124140055@student.itera.ac.id</td></tr>
+        <tr><th>Tanggal Lahir</th><td>2005-11-23</td></tr>
+        <tr><th>Program Studi</th><td>Teknik Informatika</td></tr>
+        <tr><th>Jenis Kelamin</th><td>Laki-laki</td></tr>
+        <tr><th>Alamat</th><td>Jl. Terusan Ryacudu, Way Hui, Lampung Selatan</td></tr>
+      </table>
+    </div>
+
+    <!-- Desain query string yang dikirim dari halaman pendaftaran -->
+    <div class="box">
+      <h2>Desain Query String</h2>
+      <p>Saat form pada halaman pendaftaran dikirim dengan method <b>GET</b>,
+         data dilempar ke halaman ini melalui URL dengan format:</p>
+      <div class="query-box">
+        detail.html?nama=Settiani&amp;nim=124140055&amp;kelas=RA&amp;email=settiani.124140055@student.itera.ac.id&amp;tgl_lahir=2005-11-23&amp;prodi=Teknik+Informatika&amp;Perempuan&amp;alamat=Jl.+Terusan+Ryacudu
+      </div>
+
+      <table>
+        <tr><th>Parameter</th><th>Asal Field</th><th>Contoh Nilai</th></tr>
+        <tr><td>nama</td><td>input text #nama</td><td>Settiani simanjuntak </td></tr>
+        <tr><td>nim</td><td>input text #nim</td><td>124140055</td></tr>
+        <tr><td>kelas</td><td>input text #kelas</td><td>RA</td></tr>
+        <tr><td>email</td><td>input email #email</td><td>settiani.124140055@student.itera.ac.id</td></tr>
+        <tr><td>tgl_lahir</td><td>input date #tgl_lahir</td><td>2005-11-23</td></tr>
+        <tr><td>prodi</td><td>select #prodi</td><td>Teknik Informatika</td></tr>
+        <tr><td>gender</td><td>radio gender</td><td>Perempuan</td></tr>
+        <tr><td>alamat</td><td>textarea #alamat</td><td>Jl. Terusan Ryacudu</td></tr>
+      </table>
+
+      <p class="note">Catatan: sesuai ketentuan tugas, halaman ini hanya mendesain
+         query string dan tidak menangkap/menampilkan data dari URL.</p>
+
+      <div class="btn-group">
+        <a href="pendaftaran.html" class="btn btn-secondary">&larr; Kembali ke Pendaftaran</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">Informatika ITERA &copy; 2026</div>
+
+</body>
+</html>

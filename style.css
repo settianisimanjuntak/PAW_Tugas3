@@ -1,0 +1,152 @@
+/* ===== Reset & dasar (selector elemen) ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eef3f9;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* ===== Header & navigasi (selector class + id) ===== */
+#header {
+  background: #14599b;
+  color: #fff;
+  padding: 18px 0;
+  text-align: center;
+}
+#header h1 { margin: 0; font-size: 1.5rem; }
+#header p  { margin: 4px 0 0; font-size: .9rem; opacity: .85; }
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background: #0f4577;
+  padding: 8px;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: .9rem;
+}
+.nav a:hover,
+.nav a.active { background: #ff9248; }
+
+/* ===== Layout & box ===== */
+.container {
+  max-width: 760px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+.box {
+  background: #fff;
+  border-radius: 12px;
+  border-top: 5px solid #ff9248;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.box h2 {
+  margin-top: 0;
+  color: #14599b;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+/* ===== Form ===== */
+.form-group { margin-bottom: 16px; }
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+.form-row .form-group { flex: 1; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: .92rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: .95rem;
+  font-family: inherit;
+  transition: border-color .2s, box-shadow .2s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #14599b;
+  box-shadow: 0 0 0 3px rgba(20, 89, 155, .2);
+}
+.radio-group { display: flex; gap: 20px; }
+.radio-group label { font-weight: 400; display: flex; align-items: center; gap: 6px; }
+
+.btn-group { display: flex; gap: 10px; margin-top: 8px; }
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #14599b;
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover { background: #0f4577; }
+.btn-secondary { background: #6b7280; }
+.btn-secondary:hover { background: #4b5563; }
+
+/* ===== Tabel ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+th, td {
+  padding: 11px 14px;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+}
+th { width: 32%; background: #e8f1fb; color: #14599b; }
+tr:nth-child(even) td { background: #f9fafb; }
+tr:hover td { background: #fff3e8; }
+
+/* ===== Kotak query string ===== */
+.query-box {
+  background: #1f2937;
+  color: #a7f3d0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-family: Consolas, monospace;
+  font-size: .85rem;
+  word-break: break-all;
+}
+.note { font-size: .88rem; color: #6b7280; }
+
+/* ===== Footer ===== */
+#footer {
+  text-align: center;
+  padding: 16px;
+  font-size: .85rem;
+  color: #6b7280;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 560px) {
+  .form-row { flex-direction: column; gap: 0; }
+}

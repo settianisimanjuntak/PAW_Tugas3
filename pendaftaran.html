@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header">
+    <h1>Pendaftaran Peserta Workshop Web</h1>
+    <p>Tugas Individu 3 - Pengembangan Aplikasi Web</p>
+  </div>
+
+  <div class="nav">
+    <a href="pendaftaran.html" class="active">Pendaftaran</a>
+    <a href="detail.html">Detail Pendaftar</a>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <h2>Formulir Pendaftaran</h2>
+
+      <!--
+        Form memakai method GET. Saat tombol Daftar ditekan, isi setiap
+        field dikirim lewat URL sebagai query string, berdasarkan atribut
+        "name" masing-masing input, contoh:
+        detail.html?nama=Budi&nim=123140001&email=budi@mail.com&...
+      -->
+      <form action="detail.html" method="GET">
+
+        <div class="form-group">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="Contoh:" required>
+          </div>
+          <div class="form-group">
+            <label for="kelas">Kelas</label>
+            <input type="text" id="kelas" name="kelas" placeholder="Contoh: " required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tgl_lahir"></label>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+          </div>
+          <div class="form-group">
+            <label for="prodi">Program Studi</label>
+            <select id="prodi" name="prodi" required>
+              <option value="">-- Pilih Program Studi --</option>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Sistem Informasi">Sistem Informasi</option>
+              <option value="Teknik Elektro">Teknik Elektro</option>
+              <option value="Sains Data">Sains Data</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Jenis Kelamin</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+            <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="alamat">Alamat</label>
+          <textarea id="alamat" name="alamat" rows="3" placeholder="Masukkan alamat lengkap"></textarea>
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn">Daftar</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div id="footer">Informatika ITERA &copy; 2026</div>
+
+</body>
+</html>
